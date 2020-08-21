@@ -16,7 +16,7 @@ void handle_errors(char expression[], int *pos)
 
 }
 
-int is_numerid_character(char c)
+int is_numeric_character(char c)
 {
     if (c >= 48 && c <= 57)
     {

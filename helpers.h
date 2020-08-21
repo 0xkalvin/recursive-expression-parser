@@ -6,6 +6,6 @@
 
 int match(char c, char expression[], int *position, char* lookahead);
 void handle_errors(char expression[], int *position);
-int is_numerid_character(char c);
+int is_numeric_character(char c);
 
 #endif

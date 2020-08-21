@@ -81,7 +81,7 @@ int F(char expression[], int *pos, char *lookahead)
         }
         return 0;
     }
-    else if (is_numerid_character(*lookahead))
+    else if (is_numeric_character(*lookahead))
     {
         if (M(expression, pos, lookahead))
         {
@@ -94,7 +94,7 @@ int F(char expression[], int *pos, char *lookahead)
 
 int M(char expression[], int *pos, char *lookahead)
 {
-    if (is_numerid_character(*lookahead))
+    if (is_numeric_character(*lookahead))
     {
         if (match(*lookahead, expression, pos, lookahead) && P(expression, pos, lookahead))
         {
@@ -107,7 +107,7 @@ int M(char expression[], int *pos, char *lookahead)
 
 int P(char expression[], int *pos, char *lookahead)
 {
-    if (is_numerid_character(*lookahead))
+    if (is_numeric_character(*lookahead))
     {
         if (match(*lookahead, expression, pos, lookahead) && P(expression, pos, lookahead))
         {
